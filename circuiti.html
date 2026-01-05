@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMR GP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://media.discordapp.net/attachments/1289683662803046531/1296857317882597397/FMRGP.png?ex=695d29ff&is=695bd87f&hm=ec0c91531cc7194c104f3f17a6a7b9f5aedf0c13a015f49fc90dffba8080996c&=&format=webp&quality=lossless" alt="F1 Logo" class="nav-logo"
+                style="width: 100px; height: auto;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="circuiti.html" class="active">Circuiti</a></li>
+                <li><a href="scuderie.html">Scuderie</a></li>
+                <li><a href="piloti.html">Piloti</a></li>
+                <li><a href="LINK_DISCORD" class="btn-discord">Entra nel Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <br><br><br>
+
+<section id="circuiti" class="container">
+    <h2 class="section-title">Circuiti</h2>
+    <div class="grid">
+<div class="card" onclick="openModal('monaco')">
+    <h3 class="font-akrobat">MONACO</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1023344600221503538/Immagine_2022-09-24_232526.png?ex=695cd52d&is=695b83ad&hm=c21b5d9dd01227d37aa30fe1dc6ba0cddbf50e916b722b7d7f50eed4ac2a71ac&" alt="Monaco Circuit">
+</div>
+
+<div class="card" onclick="openModal('nurburgring')">
+    <h3 class="font-akrobat">NURBURGRING</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1023345259763204189/GP-Circuit8.jpg?ex=695cd5ca&is=695b844a&hm=b3898a58db42dbc4620d4b0a10b18974dc8e05b0f637a658dcc0dbc5e04a4cc0&" alt="Nürburgring Circuit">
+</div>
+
+<div class="card" onclick="openModal('lemans')">
+    <h3 class="font-akrobat">LE MANS</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1023345526525149184/Le-Mans-20173.jpg?ex=695cd60a&is=695b848a&hm=902908ac9a185fef679bb1ff27578f5c21b3bdd527591bafe5fb24fbdd2b5069&" alt="Le Mans Circuit">
+</div>
+
+<div class="card" onclick="openModal('monza')">
+    <h3 class="font-akrobat">MONZA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1077930750499885126/Screenshot_24.png?ex=695d00bd&is=695baf3d&hm=8b8be22652979cf5cc1f95a8843d39047655c178aa5824aa624485e7926a7d7a&" alt="Monza Circuit">
+</div>
+
+<div class="card" onclick="openModal('laguna')">
+    <h3 class="font-akrobat">LAGUNA SECA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1077938104364712017/Immagine_2023-02-22_140010.png?ex=695d0797&is=695bb617&hm=48558bd27f51d4f174b26d97698ff1104090db519c48f386e58cebc98c108bc8&" alt="Laguna Seca Circuit">
+</div>
+
+<div class="card" onclick="openModal('daytona')">
+    <h3 class="font-akrobat">INTERNATIONAL CIRCUIT DAYTONA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1187805736944816260/Immagine_2023-12-22_180817.png?ex=695c9a8c&is=695b490c&hm=d0361fb2bc11e2e7fca7d239425b917a1bddbefb20c3ccfe34139cee04ee34aa&" alt="Daytona Circuit">
+</div>
+
+<div class="card" onclick="openModal('sepang')">
+    <h3 class="font-akrobat">SEPANG</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1187805857111605298/Immagine_2023-12-22_181009.png?ex=695c9aa8&is=695b4928&hm=41036d7f7acb2b764ee6b9da04ac364e496cd23b71ad9ffc315d1b8da105dd56&" alt="Sepang Circuit">
+</div>
+
+<div class="card" onclick="openModal('singapore')">
+    <h3 class="font-akrobat">SINGAPORE</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1187806009884954724/Immagine_2023-12-22_181439.png?ex=695c9acd&is=695b494d&hm=9e4b2ba5ececb71d7a5a400abd8f38e668bc91fefaa1160d3163df3aee1f968d&" alt="Singapore Circuit">
+</div>
+
+<div class="card" onclick="openModal('shangai')">
+    <h3 class="font-akrobat">SHANGHAI</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1187807152706965578/Immagine_2023-07-22_224453.png?ex=695c9bdd&is=695b4a5d&hm=498e415ef5977fcf2cdee96229e60039f1b026d60bc86843f17b963db56f5e42&" alt="Shanghai Circuit">
+</div>
+
+<div class="card" onclick="openModal('catalunya')">
+    <h3 class="font-akrobat">CATALUNYA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1196423472574906460/Immagine_2024-01-15_125855.png?ex=695cf930&is=695ba7b0&hm=ae527d19db2bf140ab8e3d7f22cc682faf1013de9ff57e188badaa0ceca17502&" alt="Catalunya Circuit">
+</div>
+
+<div class="card" onclick="openModal('imola')">
+    <h3 class="font-akrobat">IMOLA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1206263220961026118/Immagine_2024-02-11_145804.png?ex=695d2cab&is=695bdb2b&hm=239f10e8f989beb1b319b1e51b2a14d0ee3058d5fc550108ec929a33fff090b0&" alt="Imola Circuit">
+</div>
+
+<div class="card" onclick="openModal('suzuka')">
+    <h3 class="font-akrobat">SUZUKA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1218601190858690580/Immagine_2024-03-16_174437.png?ex=695d3c4c&is=695beacc&hm=95a998762d9aee55dc7c76c900023e6c977a949c7bde65037d2855db24b94635&" alt="Suzuka Circuit">
+</div>
+
+<div class="card" onclick="openModal('bahrain')">
+    <h3 class="font-akrobat">BAHRAIN</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1218602999908274277/Immagine_2024-03-16_175010.png?ex=695d3dfb&is=695bec7b&hm=88bfd4cca794efe73627bafc43fa9603f5fbaec61ce53d2310af00a4a34df950&" alt="Bahrain Circuit">
+</div>
+
+<div class="card" onclick="openModal('silverstone')">
+    <h3 class="font-akrobat">SILVERSTONE</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1218603871824252988/Immagine_2024-03-16_175607.png?ex=695d3ecb&is=695bed4b&hm=a31fa6d2fa4ecd102c510c559c8f237a8345fad17f0131c646eacb6d20523638&" alt="Silverstone Circuit">
+</div>
+
+<div class="card" onclick="openModal('spa')">
+    <h3 class="font-akrobat">SPA FRANCORCHAMPS</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1219701467913523220/SPA.png?ex=695c9fc2&is=695b4e42&hm=af5b28448bb3481cdb883729c6478ec3a5793fd2c1710f8e06fd4d4d2888e9dc&" alt="Spa Francorchamps Circuit">
+</div>
+
+<div class="card" onclick="openModal('mugello')">
+    <h3 class="font-akrobat">MUGELLO</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1225089509809590415/Immagine_2024-04-02_205004.png?ex=695d1c04&is=695bca84&hm=e426bb991ac6a335a1545d2a4e592cf9939fb018591993e44f115f80ba00daf4&" alt="Mugello Circuit">
+</div>
+
+<div class="card" onclick="openModal('spielberg')">
+    <h3 class="font-akrobat">SPIELBERG</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229463069835395233/Screenshot_2024-02-13_21-32-21.png?ex=695d3336&is=695be1b6&hm=58333327dcc36d2c6260a502f1c7c30ded7d95049b2a65e8d3f785956cb9d176&" alt="Spielberg Circuit">
+</div>
+
+<div class="card" onclick="openModal('austin')">
+    <h3 class="font-akrobat">AUSTIN</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229463960441454592/Immagine_2024-04-15_181014.png?ex=695d340a&is=695be28a&hm=41fb97912eca03564d4922a85b7aae3537832dd3561b87e7549f0ac8c80acfb3&" alt="Austin Circuit">
+</div>
+
+<div class="card" onclick="openModal('zandvoort')">
+    <h3 class="font-akrobat">ZANDVOORT</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229467400882094230/Immagine_2024-04-15_182324.png?ex=695d373e&is=695be5be&hm=adb5b645153bcb02dd607f94f6ba1eb7b074824aacfb07f417266d838e1471f3&" alt="Zandvoort Circuit">
+</div>
+
+<div class="card" onclick="openModal('hungaroring')">
+    <h3 class="font-akrobat">HUNGARORING</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229480224354336848/Immagine_2024-04-15_191455.png?ex=695c9a70&is=695b48f0&hm=9845eec228263a9515add65d04d1e70dafd51be2d490d435d383c97b62492b91&" alt="Hungaroring Circuit">
+</div>
+
+<div class="card" onclick="openModal('losail')">
+    <h3 class="font-akrobat">LOSAIL</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229742967506600046/Immagine_2024-04-16_123850.png?ex=695ce662&is=695b94e2&hm=86015f612940c3f275e800f81f0f7cfb0761025afc066e937d5f0542181dd2c5&" alt="Losail Circuit">
+</div>
+
+<div class="card" onclick="openModal('interlagos')">
+    <h3 class="font-akrobat">INTERLAGOS</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1229744388461170779/Immagine_2024-04-16_124438.png?ex=695ce7b5&is=695b9635&hm=b9c37f3143e791ed598c25a75ab2861bdf073668fcf98fbf934e5daead8afdee&" alt="Interlagos Circuit">
+</div>
+
+<div class="card" onclick="openModal('messico')">
+    <h3 class="font-akrobat">MESSICO</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1230414610645913681/Screenshot_2024-04-18_090714.png?ex=695cb4e7&is=695b6367&hm=400333c9648536622eaca370687b162571cfb664673cc768f4ffa1913f796da2&" alt="Messico Circuit">
+</div>
+
+<div class="card" onclick="openModal('montreal')">
+    <h3 class="font-akrobat">MONTREAL</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1230415470440747008/Screenshot_2024-04-18_091103.png?ex=695cb5b4&is=695b6434&hm=6f981d1bbe070766db774a3614200dd1b6da478e2e63bf8e8e808f2620cd03e5&" alt="Montreal Circuit">
+</div>
+
+<div class="card" onclick="openModal('melbourne')">
+    <h3 class="font-akrobat">MELBOURNE</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1230423650700623912/Screenshot_2024-04-18_094325.png?ex=695cbd52&is=695b6bd2&hm=86d094d3164ba873a66e1631140fed6ec04ba1bef3fd77bd602ab081f221ca1a&" alt="Melbourne Circuit">
+</div>
+
+<div class="card" onclick="openModal('hockenheimring')">
+    <h3 class="font-akrobat">HOCKENHEIMRING</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1230425834179792906/Screenshot_2024-03-23_23-19-58.png?ex=695cbf5b&is=695b6ddb&hm=69b4fc90db38277ce64dcca7a7874584bf480fc5febaf3411b0a4b9181a06c4c&" alt="Hockenheimring Circuit">
+</div>
+
+<div class="card" onclick="openModal('yasmarina')">
+    <h3 class="font-akrobat">YAS MARINA</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1230478238946431006/Screenshot_2024-04-18_131939.png?ex=695cf029&is=695b9ea9&hm=15f6070b0373c65074367d03c1da445f6d6b093d105a944b531fa7eb3a7c1f40&" alt="Yas Marina Circuit">
+</div>
+
+<div class="card" onclick="openModal('baku')">
+    <h3 class="font-akrobat">BAKU</h3>
+    <img src="https://cdn.discordapp.com/attachments/1023344512090787870/1302223938876604469/Screenshot_2024-11-02_115144.png?ex=695ce98d&is=695b980d&hm=162f03fb52c7150fd15b5af7583a4445a84edb24d09974ece9a54170a2c44a5e&" alt="Baku Circuit">
+</div>
+
+        </div>
+</section>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-body">
+            <div class="modal-left">
+                <h2 id="modalTitle" class="font-akrobat">NOME</h2>
+                <div class="red-divider"></div> <p id="modalDesc">Descrizione qui...</p>
+            </div>
+
+            <div class="modal-right">
+                <ul id="modalStats">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

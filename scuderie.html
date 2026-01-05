@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMR GP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://media.discordapp.net/attachments/1289683662803046531/1296857317882597397/FMRGP.png?ex=695d29ff&is=695bd87f&hm=ec0c91531cc7194c104f3f17a6a7b9f5aedf0c13a015f49fc90dffba8080996c&=&format=webp&quality=lossless" alt="F1 Logo" class="nav-logo"
+                style="width: 100px; height: auto;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="circuiti.html">Circuiti</a></li>
+                <li><a href="scuderie.html" class="active">Scuderie</a></li>
+                <li><a href="piloti.html">Piloti</a></li>
+                <li><a href="LINK_DISCORD" class="btn-discord">Entra nel Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+<section id="scuderie" class="container">
+    <h2 class="section-title">Scuderie</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal('bmw')">
+            <h3 class="font-akrobat">BMW M POWER F1 Racing</h3>
+            <img src="https://www.logo.wine/a/logo/BMW/BMW-Logo.wine.svg" alt="bmw">
+        </div>
+        <div class="card" onclick="openModal('audi')">
+            <h3 class="font-akrobat">Audi Sport F1 Team</h3>
+            <img src="https://www.logo.wine/a/logo/Audi/Audi-Logo.wine.svg" alt="audi">
+        </div>
+        <div class="card" onclick="openModal('porsche')">
+            <h3 class="font-akrobat">Porsche 911 E-HYBRID F1 Racing</h3>
+            <img src="https://www.logo.wine/a/logo/Porsche/Porsche-Logo.wine.svg" alt="porsche">
+        </div>
+        <div class="card" onclick="openModal('mclaren')">
+            <h3 class="font-akrobat">McLaren F1 Team Racing</h3>
+            <img src="https://www.logo.wine/a/logo/McLaren_Group/McLaren_Group-Logo.wine.svg" alt="mclaren">
+        </div>
+            <div class="card" onclick="openModal('aston')">
+            <h3 class="font-akrobat">Aston Martin Aramco Cognizant F1 Team</h3>
+            <img src="https://www.pngplay.com/wp-content/uploads/13/Aston-Martin-Logo-No-Background.png" alt="aston">
+        </div>
+                <div class="card" onclick="openModal('mercedes')">
+            <h3 class="font-akrobat">Mercedes-AMG Petronas F1 Team</h3>
+            <img src="https://www.logo.wine/a/logo/Mercedes-AMG/Mercedes-AMG-Logo.wine.svg" alt="mercedes">
+        </div>
+                <div class="card" onclick="openModal('alpine')">
+            <h3 class="font-akrobat">Alpine F1 Racing Team</h3>
+            <img src="https://www.logo.wine/a/logo/Alpine_(automobile)/Alpine_(automobile)-Logo.wine.svg" alt="alpine">
+        </div>
+                <div class="card" onclick="openModal('ferrari')">
+            <h3 class="font-akrobat">Scuderia Ferrari F1 Team</h3>
+            <img src="https://www.logo.wine/a/logo/Ferrari/Ferrari-Logo.wine.svg" alt="ferrari">
+        </div>
+                <div class="card" onclick="openModal('lamborghini')">
+            <h3 class="font-akrobat">Lamborghini SVJ ENI Squadra Corse F1</h3>
+            <img src="https://www.logo.wine/a/logo/Lamborghini/Lamborghini-Logo.wine.svg" alt="lamborghini">
+        </div>
+                <div class="card" onclick="openModal('pagani')">
+            <h3 class="font-akrobat">Prada Pagani Zonda F1 Team</h3>
+            <img src="https://www.logo.wine/a/logo/Pagani_(company)/Pagani_(company)-Logo.wine.svg" alt="pagani">
+        </div>
+    </div>
+</section>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-body">
+            <div class="modal-left">
+                <h2 id="modalTitle" class="font-akrobat">NOME</h2>
+                <div class="red-divider"></div> <p id="modalDesc">Descrizione qui...</p>
+            </div>
+
+            <div class="modal-right">
+                <ul id="modalStats">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

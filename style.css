@@ -1,0 +1,283 @@
+@import url('https://fonts.cdnfonts.com/css/akrobat');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;900&display=swap');
+
+:root {
+    --black: #0b0b0b;
+    --dark-grey: #1f1f1f;
+    --red: #e10600;
+    --white: #ffffff;
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.font-akrobat { 
+    font-family: 'Akrobat', sans-serif; 
+    font-weight: 900; 
+    letter-spacing: 2px; 
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid var(--red);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-logo { height: 50px; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active { color: var(--red); }
+
+.btn-discord {
+    background: var(--red);
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.btn-discord:hover {
+    transform: scale(1.05);
+    background: #ff0800 !important;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), 
+                url('https://media.discordapp.net/attachments/1020033109544157204/1306702443337482331/Screenshot_2024-11-14_202802.png?ex=695cb9bb&is=695b683b&hm=c9bd15e3ce8cbc32fd364362281424f48c7d6d890f14ede1c434ad7ae47089b6&=&format=webp&quality=lossless');
+    background-size: cover;
+    background-position: center;
+}
+
+.main-logo {
+    width: 280px;
+    filter: drop-shadow(0 0 15px var(--red));
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 5px;
+}
+
+.red-text { color: var(--red); }
+
+.cta-button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: 2px solid var(--red);
+    background: transparent;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background: var(--red);
+    box-shadow: 0 0 25px rgba(225, 6, 0, 0.5);
+}
+
+.container { padding: 100px 5% 50px; }
+
+.section-title { 
+    font-size: 2.5rem; 
+    margin-bottom: 40px; 
+    border-left: 6px solid var(--red); 
+    padding-left: 15px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px; 
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--dark-grey);
+    padding: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.card img { 
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--red);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #111;
+    padding: 40px;
+    width: 90%;
+    max-width: 1100px;
+    max-height: 85vh;
+    border-top: 5px solid var(--red);
+    border-radius: 4px;
+    position: relative;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
+    overflow-y: auto;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-body { 
+    display: flex; 
+    gap: 40px; 
+}
+
+.modal-left { flex: 2; min-width: 300px; }
+
+.modal-right { 
+    flex: 1; 
+    min-width: 250px;
+    background: var(--dark-grey); 
+    padding: 25px; 
+    border-radius: 8px;
+    border-left: 4px solid var(--red);
+}
+
+.close-btn {
+    position: absolute; right: 20px; top: 15px;
+    font-size: 30px; color: #777; cursor: pointer; transition: 0.3s;
+}
+
+.close-btn:hover { color: var(--red); transform: rotate(90deg); }
+
+.card-pilota {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 30px;
+    background: linear-gradient(145deg, #1a1a1a, #111);
+    border-left: 4px solid #333;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-pilota:hover {
+    border-left: 4px solid var(--red);
+    transform: translateX(10px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.driver-number {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--red);
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.card-pilota h3 {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.scuderia-appartenenza {
+    font-size: 0.85rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.card-pilota:hover .scuderia-appartenenza {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .grid { grid-template-columns: 1fr; }
+    .modal-body { flex-direction: column; }
+    .modal-content { padding: 20px; }
+    .hero h1 { font-size: 2.5rem; }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMR GP</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="https://media.discordapp.net/attachments/1289683662803046531/1296857317882597397/FMRGP.png?ex=695d29ff&is=695bd87f&hm=ec0c91531cc7194c104f3f17a6a7b9f5aedf0c13a015f49fc90dffba8080996c&=&format=webp&quality=lossless" alt="F1 Logo" class="nav-logo"
+                style="width: 100px; height: auto;">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="circuiti.html">Circuiti</a></li>
+                <li><a href="scuderie.html">Scuderie</a></li>
+                <li><a href="piloti.html" class="active">Piloti</a></li>
+                <li><a href="LINK_DISCORD" class="btn-discord">Entra nel Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<br><br><br>
+
+<section id="piloti" class="container">
+    <h2 class="section-title">Line-up Piloti</h2>
+    <div class="grid">
+        <div class="card card-pilota" onclick="openModal('miccel')">
+            <div class="card-header">
+                <span class="driver-number">#1</span>
+                <h3 class="font-akrobat">Miccel Schumacher</h3>
+            </div>
+            <p class="scuderia-appartenenza">Scuderia Ferrari F1 Team</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('silvio')">
+            <div class="card-header">
+                <span class="driver-number">#2</span>
+                <h3 class="font-akrobat">Silvio Lo Piccolo</h3>
+            </div>
+            <p class="scuderia-appartenenza">Scuderia Ferrari F1 Team</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('samuele')">
+            <div class="card-header">
+                <span class="driver-number">#3</span>
+                <h3 class="font-akrobat">Samuele Baldi</h3>
+            </div>
+            <p class="scuderia-appartenenza">Lamborghini SVJ ENI Squadra Corse F1</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('kevin')">
+            <div class="card-header">
+                <span class="driver-number">#4</span>
+                <h3 class="font-akrobat">Kevin Fix</h3>
+            </div>
+            <p class="scuderia-appartenenza">Lamborghini SVJ ENI Squadra Corse F1</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('karos')">
+            <div class="card-header">
+                <span class="driver-number">#5</span>
+                <h3 class="font-akrobat">Karos</h3>
+            </div>
+            <p class="scuderia-appartenenza">KRS Williams Racing F1</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('chri')">
+            <div class="card-header">
+                <span class="driver-number">#6</span>
+                <h3 class="font-akrobat">Chri</h3>
+            </div>
+            <p class="scuderia-appartenenza">KRS Williams Racing F1</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('strano')">
+            <div class="card-header">
+                <span class="driver-number">#7</span>
+                <h3 class="font-akrobat">マニュ._.</h3>
+            </div>
+            <p class="scuderia-appartenenza">Audi Sport F1 Team</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('chaos')">
+            <div class="card-header">
+                <span class="driver-number">#8</span>
+                <h3 class="font-akrobat">Chaos Francesco</h3>
+            </div>
+            <p class="scuderia-appartenenza">Mercedes-AMG Petronas F1 Team</p>
+        </div>
+                <div class="card card-pilota" onclick="openModal('cuore')">
+            <div class="card-header">
+                <span class="driver-number">#9</span>
+                <h3 class="font-akrobat">Cuore8022</h3>
+            </div>
+            <p class="scuderia-appartenenza">Porsche 911 E-HYBRID F1 Racing</p>
+        </div>
+    </div>
+</section>
+
+<div id="infoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <div class="modal-body">
+            <div class="modal-left">
+                <h2 id="modalTitle" class="font-akrobat">NOME</h2>
+                <div class="red-divider"></div> <p id="modalDesc">Descrizione qui...</p>
+            </div>
+
+            <div class="modal-right">
+                <ul id="modalStats">
+                    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

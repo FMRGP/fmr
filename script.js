@@ -1,4 +1,7 @@
 const database = {
+
+// ----------------------- CIRCUITI -----------------------
+
 monaco: {
     title: "MONACO",
     desc: "Circuito cittadino iconico tra le strade di Montecarlo, sfida di precisione e coraggio.",
@@ -251,6 +254,9 @@ baku: {
         { label: "CURVE", value: "20" }
     ]
 },
+
+// ----------------------- SCUDERIE -----------------------
+
 bmw: {
     title: "BMW M POWER F1 Racing",
     desc: "Scuderia innovativa tedesca, unisce tecnologia e performance in pista.",
@@ -350,9 +356,13 @@ krs: {
         { label: "CAMPIONATI", value: "0" }
     ]
 },
+
+// ----------------------- PILOTI -----------------------
+
 miccel: {
     title: "Miccel Schumacher",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -362,6 +372,7 @@ miccel: {
 silvio: {
     title: "Silvio Lo Piccolo",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -371,6 +382,7 @@ silvio: {
 samuele: {
     title: "Samuele Baldi",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -380,6 +392,7 @@ samuele: {
 kevin: {
     title: "Kevin Fix",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -389,6 +402,7 @@ kevin: {
 karos: {
     title: "Karos",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -398,6 +412,7 @@ karos: {
 chri: {
     title: "Chri",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -407,6 +422,7 @@ chri: {
 strano: {
     title: "マニュ._.",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -416,6 +432,7 @@ strano: {
 chaos: {
     title: "Chaos Francesco",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -425,6 +442,7 @@ chaos: {
 cuore: {
     title: "Cuore8022",
     desc: "",
+    punti: 0,
     stats: [
         { label: "PAESE", value: "Italia" },
         { label: "GP VINTI", value: "0" },
@@ -491,3 +509,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+function renderClassifica() {
+    const tbody = document.getElementById('ranking-body');
+    if (!tbody) return;
+
+    const pilotiKeys = [
+        'miccel', 'silvio', 'samuele', 'kevin', 
+        'karos', 'chri', 'strano', 'chaos', 'cuore'
+    ];
+
+    const assegnazioneScuderie = {
+        miccel: "Scuderia Ferrari F1 Team",
+        silvio: "Scuderia Ferrari F1 Team",
+        samuele: "Lamborghini SVJ ENI Squadra Corse F1",
+        kevin: "Lamborghini SVJ ENI Squadra Corse F1",
+        karos: "KRS Williams Racing F1",
+        chri: "KRS Williams Racing F1",
+        strano: "Audi Sport F1 Team",
+        chaos: "Mercedes-AMG Petronas F1 Team",
+        cuore: "Porsche 911 E-HYBRID F1 Racing"
+    };
+
+
+    const pilotiPerTabella = pilotiKeys.map(key => {
+        const datiPilota = database[key];
+        return {
+            id: key,
+            nome: datiPilota ? datiPilota.title : "Pilota Ignoto",
+            punti: datiPilota ? (datiPilota.punti || 0) : 0,
+            scuderia: assegnazioneScuderie[key] || "Privato"
+        };
+    });
+
+    pilotiPerTabella.sort((a, b) => b.punti - a.punti);
+
+    tbody.innerHTML = "";
+    pilotiPerTabella.forEach((pilota, index) => {
+        const row = `
+            <tr onclick="openModal('${pilota.id}')" style="cursor: pointer;">
+                <td>${index + 1}</td>
+                <td style="font-weight: bold; text-transform: uppercase;">${pilota.nome}</td>
+                <td style="color: #aaa;">${pilota.scuderia}</td>
+                <td style="color: #ff1801; font-weight: 900; font-size: 1.2rem;">${pilota.punti}</td>
+            </tr>
+        `;
+        tbody.innerHTML += row;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', renderClassifica);
+
